@@ -16,5 +16,14 @@ def test_1900_is_not_a_leap_year():
     (2040, True),    # divisible by 4 but not by 100 
     (1000, False),   # divisible by 100 but not by 400 
     ]) 
+
 def test_is_leap(year, expected): 
     assert is_leap(year) == expected 
+
+def test_year_zero_is_rejected(): 
+    with pytest.raises(ValueError, match="1 or later"): 
+        is_leap(0) 
+        
+def test_negative_year_is_rejected(): 
+    with pytest.raises(ValueError, match="1 or later"): 
+        is_leap(-2000) 
