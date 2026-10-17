@@ -32,3 +32,8 @@ def test_withdraw_two_times(account):
     account.withdraw(20) 
     account.withdraw(30) 
     assert account.balance == 50
+    
+#step 0.6
+def test_interest(account): 
+    account.add_interest(0.10) 
+    assert account.balance == pytest.approx(110)
