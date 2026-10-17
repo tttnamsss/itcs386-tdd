@@ -7,7 +7,7 @@
 ☐  200 g + 1 oz, reduced to grams, using a conversion rate 
 ☐  (200 g + 1 oz) × 2 
 """
-from kitchen import Quantity, grams, ounces, Converter
+from kitchen import Quantity, grams, ounces, Converter, Sum
  
 def test_multiplication(): 
     flour = grams(200) 
